@@ -1,5 +1,5 @@
-# module "tags" {
-#   source         = "git@github.com:CA-Bridge/ccaas-terraform-modules.git//terraform-aws-tags?ref=v1.0.0"
+﻿# module "tags" {
+#   source         = "git::https://github.com/kiro-krafters/kk-terraform-modules.git//terraform-aws-tags?ref=main"
 #   application    = var.application
 #   company        = var.company
 #   environment    = var.environment

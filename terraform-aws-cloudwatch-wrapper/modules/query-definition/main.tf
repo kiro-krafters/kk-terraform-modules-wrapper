@@ -1,5 +1,5 @@
-module "query_definition" {
-  source          = "git@github.com:CA-Bridge/ccaas-terraform-modules.git//terraform-aws-cloudwatch/modules/query-definition?ref=v1.0.0"
+﻿module "query_definition" {
+  source          = "git::https://github.com/kiro-krafters/kk-terraform-modules.git//terraform-aws-cloudwatch/modules/query-definition?ref=main"
   count           = var.query_definition_configuration != null && var.query_definition_configuration != {} ? 1 : 0
   name            = var.query_definition_configuration.name
   query_string    = var.query_definition_configuration.string

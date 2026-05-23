@@ -1,5 +1,5 @@
-module "metric_stream" {
-  source                   = "git@github.com:CA-Bridge/ccaas-terraform-modules.git//terraform-aws-cloudwatch/modules/metric-stream?ref=v1.0.0"
+﻿module "metric_stream" {
+  source                   = "git::https://github.com/kiro-krafters/kk-terraform-modules.git//terraform-aws-cloudwatch/modules/metric-stream?ref=main"
   count                    = var.metric_stream_configuration != null && var.metric_stream_configuration != {} ? 1 : 0
   firehose_arn             = var.metric_stream_configuration.firehose_arn
   output_format            = var.metric_stream_configuration.output_format

@@ -1,5 +1,5 @@
-module "wrapper" {
-  source = "git@github.com:CA-Bridge/ccaas-terraform-modules.git//terraform-aws-lambda?ref=v1.0.0/modules/alias"
+﻿module "wrapper" {
+  source = "git::https://github.com/kiro-krafters/kk-terraform-modules.git//terraform-aws-lambda?ref=main/modules/alias"
 
   for_each = var.items
 

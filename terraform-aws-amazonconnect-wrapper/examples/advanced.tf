@@ -1,5 +1,5 @@
-module "amazon_connect_advance" {
-  source                       = "git@github.com:CA-Bridge/ccaas-terraform-modules-wrapper.git//terraform-aws-amazonconnect?ref=v1.0.0"
+﻿module "amazon_connect_advance" {
+  source                       = "git::https://github.com/kiro-krafters/kk-terraform-modules-wrapper.git//terraform-aws-amazonconnect?ref=main"
   bucket_name                  = "test-bucket"
   contact_flows                = {}
   quick_connects               = {}

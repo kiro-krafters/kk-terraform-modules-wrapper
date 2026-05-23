@@ -1,5 +1,5 @@
-module "aws_kms" {
-  source                                 = "git@github.com:CA-Bridge/ccaas-terraform-modules.git//terraform-aws-kms?ref=v1.0.3"
+﻿module "aws_kms" {
+  source                                 = "git::https://github.com/kiro-krafters/kk-terraform-modules.git//terraform-aws-kms?ref=main"
   description                            = var.description
   multi_region                           = var.multi_region
   enable_default_policy                  = var.enable_default_policy

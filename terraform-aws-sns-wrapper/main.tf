@@ -1,5 +1,5 @@
-module "sns" {
-  source = "git@github.com:CA-Bridge/ccaas-terraform-modules.git//terraform-aws-sns?ref=v1.0.0"
+﻿module "sns" {
+  source = "git::https://github.com/kiro-krafters/kk-terraform-modules.git//terraform-aws-sns?ref=main"
 
   for_each = var.items
 

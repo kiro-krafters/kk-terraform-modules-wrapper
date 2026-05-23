@@ -1,5 +1,5 @@
-module "log_account_policy" {
-  source                                        = "git@github.com:CA-Bridge/ccaas-terraform-modules.git//terraform-aws-cloudwatch/modules/log-account-policy?ref=v1.0.0"
+﻿module "log_account_policy" {
+  source                                        = "git::https://github.com/kiro-krafters/kk-terraform-modules.git//terraform-aws-cloudwatch/modules/log-account-policy?ref=main"
   count                                         = var.log_account_policy_configuration != null && var.log_account_policy_configuration != {} ? 1 : 0
   audit_statement_sid                           = lookup(var.log_account_policy_configuration, "audit_stmt_sid", "audit-policy")
   create                                        = lookup(var.log_account_policy_configuration, "create", true)

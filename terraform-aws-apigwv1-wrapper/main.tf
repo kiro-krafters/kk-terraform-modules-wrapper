@@ -1,5 +1,5 @@
-module "apigv1" {
-  source      = "git@github.com:CA-Bridge/ccaas-terraform-modules.git//terraform-aws-apigwv1?ref=v1.0.3"
+﻿module "apigv1" {
+  source      = "git::https://github.com/kiro-krafters/kk-terraform-modules.git//terraform-aws-apigwv1?ref=main"
   create_api  = var.create_api
   api_name    = var.name
   rest_api_id = var.rest_api_id

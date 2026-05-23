@@ -1,5 +1,5 @@
-module "eventbridge" {
-  source                         = "git@github.com:CA-Bridge/ccaas-terraform-modules.git//terraform-aws-eventbridge?ref=v1.0.5"
+﻿module "eventbridge" {
+  source                         = "git::https://github.com/kiro-krafters/kk-terraform-modules.git//terraform-aws-eventbridge?ref=main"
   bus_name                       = var.bus_name
   create_bus                     = var.bus_name == "default" ? false : var.create_bus
   rules                          = var.rules

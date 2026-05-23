@@ -1,5 +1,5 @@
-module "kinesis_stream" {
-  source = "git@github.com:CA-Bridge/ccaas-terraform-modules.git//terraform-aws-kinesis-stream?ref=v1.0.0"
+﻿module "kinesis_stream" {
+  source = "git::https://github.com/kiro-krafters/kk-terraform-modules.git//terraform-aws-kinesis-stream?ref=main"
 
   name = var.name == "" ? local.kinesis_stream_name : var.name
   # shard_count               = var.shard_count

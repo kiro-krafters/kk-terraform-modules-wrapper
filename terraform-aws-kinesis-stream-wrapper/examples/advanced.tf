@@ -1,5 +1,5 @@
-module "kinesis_stream_advance" {
-  source                    = "git@github.com:CA-Bridge/ccaas-terraform-modules-wrapper.git//terraform-aws-kinesis-stream?ref=v1.0.0"
+﻿module "kinesis_stream_advance" {
+  source                    = "git::https://github.com/kiro-krafters/kk-terraform-modules-wrapper.git//terraform-aws-kinesis-stream?ref=main"
   shard_count               = 1
   retention_period          = 24
   shard_level_metrics       = []

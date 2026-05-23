@@ -1,5 +1,5 @@
-module "amazon_connect" {
-  source = "git@github.com:CA-Bridge/ccaas-terraform-modules.git//terraform-aws-amazonconnect?ref=v1.0.0"
+﻿module "amazon_connect" {
+  source = "git::https://github.com/kiro-krafters/kk-terraform-modules.git//terraform-aws-amazonconnect?ref=main"
 
   instance_identity_management_type = var.instance_identity_management_type
   instance_inbound_calls_enabled    = true

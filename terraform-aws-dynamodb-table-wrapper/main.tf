@@ -1,5 +1,5 @@
-module "dynamodb_table" {
-  source                                = "git@github.com:CA-Bridge/ccaas-terraform-modules.git//terraform-aws-dynamodb-table?ref=v1.0.0"
+﻿module "dynamodb_table" {
+  source                                = "git::https://github.com/kiro-krafters/kk-terraform-modules.git//terraform-aws-dynamodb-table?ref=main"
   attributes                            = var.attributes
   autoscaling_enabled                   = var.autoscaling_enabled
   autoscaling_indexes                   = var.autoscaling_indexes

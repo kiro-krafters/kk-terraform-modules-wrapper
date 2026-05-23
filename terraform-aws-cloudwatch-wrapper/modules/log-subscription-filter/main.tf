@@ -1,5 +1,5 @@
-module "log_subscription_filter" {
-  source          = "git@github.com:CA-Bridge/ccaas-terraform-modules.git//terraform-aws-cloudwatch/modules/log-subscription-filter?ref=v1.0.0"
+﻿module "log_subscription_filter" {
+  source          = "git::https://github.com/kiro-krafters/kk-terraform-modules.git//terraform-aws-cloudwatch/modules/log-subscription-filter?ref=main"
   count           = var.log_subscription_filter_configuration != null && var.log_subscription_filter_configuration != {} ? 1 : 0
   create          = lookup(var.log_subscription_filter_configuration, "create", true)
   destination_arn = lookup(var.log_subscription_filter_configuration, "destination_arn", null)

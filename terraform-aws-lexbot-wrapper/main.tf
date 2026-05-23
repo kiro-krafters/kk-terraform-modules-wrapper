@@ -1,9 +1,9 @@
-module "lex_bot" {
+﻿module "lex_bot" {
   prefix_company              = var.prefix_company
   prefix_region               = var.prefix_region
   env                         = var.env
   application                 = var.application
-  source                      = "git@github.com:CA-Bridge/ccaas-terraform-modules.git//terraform-aws-lexbotv2?ref=v1.0.3"
+  source                      = "git::https://github.com/kiro-krafters/kk-terraform-modules.git//terraform-aws-lexbotv2?ref=main"
   name                        = var.name
   auto_build_bot_locales      = true
   instance_id                 = var.instance_id

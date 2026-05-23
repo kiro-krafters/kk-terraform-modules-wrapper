@@ -1,5 +1,5 @@
-module "s3_object" {
-  source = "git@github.com:CA-Bridge/ccaas-terraform-modules.git//terraform-aws-s3-bucket/modules/object?ref=v1.0.0"
+﻿module "s3_object" {
+  source = "git::https://github.com/kiro-krafters/kk-terraform-modules.git//terraform-aws-s3-bucket/modules/object?ref=main"
   count  = var.create_object ? 1 : 0
 
   bucket                        = var.bucket

@@ -1,5 +1,5 @@
-module "cloudfront" {
-  source                               = "git@github.com:CA-Bridge/ccaas-terraform-modules.git//terraform-aws-cloudfront?ref=v1.0.3"
+﻿module "cloudfront" {
+  source                               = "git::https://github.com/kiro-krafters/kk-terraform-modules.git//terraform-aws-cloudfront?ref=main"
   aliases                              = var.aliases
   anycast_ip_list_id                   = var.anycast_ip_list_id
   cloudfront_functions                 = var.cloudfront_functions

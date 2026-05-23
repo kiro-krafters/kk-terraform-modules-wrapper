@@ -1,5 +1,5 @@
-module "metric_alarm_multiple_dimensions" {
-  source                                = "git@github.com:CA-Bridge/ccaas-terraform-modules.git//terraform-aws-cloudwatch/modules/metric-alarms-by-multiple-dimensions?ref=v1.0.0"
+﻿module "metric_alarm_multiple_dimensions" {
+  source                                = "git::https://github.com/kiro-krafters/kk-terraform-modules.git//terraform-aws-cloudwatch/modules/metric-alarms-by-multiple-dimensions?ref=main"
   count                                 = var.metric_alarm_multi_dimension_config != null && var.metric_alarm_multi_dimension_config != {} ? 1 : 0
   alarm_name                            = lookup(var.metric_alarm_multi_dimension_config, "name", local.cw_metric_alarm_name)
   comparison_operator                   = var.metric_alarm_multi_dimension_config.comparison_operator

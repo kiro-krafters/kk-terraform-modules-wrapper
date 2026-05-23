@@ -1,5 +1,5 @@
-module "metric_alarm" {
-  source                                = "git@github.com:CA-Bridge/ccaas-terraform-modules.git//terraform-aws-cloudwatch/modules/metric-alarm?ref=v1.0.0"
+﻿module "metric_alarm" {
+  source                                = "git::https://github.com/kiro-krafters/kk-terraform-modules.git//terraform-aws-cloudwatch/modules/metric-alarm?ref=main"
   count                                 = var.metric_alarm_configuration != null && var.metric_alarm_configuration != {} ? 1 : 0
   alarm_name                            = lookup(var.metric_alarm_configuration, "name", local.cw_metric_alarm_name)
   comparison_operator                   = var.metric_alarm_configuration.comparison_operator

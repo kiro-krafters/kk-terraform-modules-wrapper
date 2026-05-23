@@ -1,5 +1,5 @@
-module "s3_bucket" {
-  source                                   = "git@github.com:CA-Bridge/ccaas-terraform-modules.git//terraform-aws-s3-bucket?ref=v1.0.1"
+﻿module "s3_bucket" {
+  source                                   = "git::https://github.com/kiro-krafters/kk-terraform-modules.git//terraform-aws-s3-bucket?ref=main"
   bucket                                   = var.bucket_name
   acl                                      = var.enable_grant == true ? null : var.acl
   control_object_ownership                 = true
@@ -40,7 +40,7 @@ module "s3_bucket" {
 }
 
 module "s3-bucket_notification" {
-  source               = "git@github.com:CA-Bridge/ccaas-terraform-modules.git//terraform-aws-s3-bucket/modules/notification?ref=v1.0.0"
+  source               = "git::https://github.com/kiro-krafters/kk-terraform-modules.git//terraform-aws-s3-bucket/modules/notification?ref=main"
   count                = var.lambda_trigger || var.eventbridge ? 1 : 0
   bucket               = var.bucket_name
   eventbridge          = var.eventbridge
@@ -52,7 +52,7 @@ module "s3-bucket_notification" {
 }
 
 module "s3_bucket_policy" {
-  source    = "git@github.com:CA-Bridge/ccaas-terraform-modules.git//terraform-aws-s3-bucket/modules/cloudfront-access-policy?ref=v1.0.0"
+  source    = "git::https://github.com/kiro-krafters/kk-terraform-modules.git//terraform-aws-s3-bucket/modules/cloudfront-access-policy?ref=main"
   count     = var.cloudfront_policy ? 1 : 0
   bucket_id = var.bucket_name
   policy    = var.policy

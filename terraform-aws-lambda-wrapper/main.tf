@@ -1,5 +1,5 @@
-module "lambda_function" {
-  source                                       = "git@github.com:CA-Bridge/ccaas-terraform-modules.git//terraform-aws-lambda?ref=v1.0.0"
+﻿module "lambda_function" {
+  source                                       = "git::https://github.com/kiro-krafters/kk-terraform-modules.git//terraform-aws-lambda?ref=main"
   count                                        = var.resource_type == "FUNCTION" ? 1 : 0
   function_name                                = var.name
   create                                       = true

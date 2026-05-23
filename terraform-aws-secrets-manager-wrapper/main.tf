@@ -1,5 +1,5 @@
-module "wrapper" {
-  source = "git@github.com:CA-Bridge/ccaas-terraform-modules.git//terraform-aws-secrets-manager?ref=v1.0.4"
+﻿module "wrapper" {
+  source = "git::https://github.com/kiro-krafters/kk-terraform-modules.git//terraform-aws-secrets-manager?ref=main"
 
   for_each = var.items
 

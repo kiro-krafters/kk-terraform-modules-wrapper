@@ -1,5 +1,5 @@
-module "firehose" {
-  source                                           = "git@github.com:CA-Bridge/ccaas-terraform-modules.git//terraform-aws-kinesis-firehose?ref=v1.0.0"
+﻿module "firehose" {
+  source                                           = "git::https://github.com/kiro-krafters/kk-terraform-modules.git//terraform-aws-kinesis-firehose?ref=main"
   name                                             = var.name == "" ? local.firehose_name : var.name
   destination                                      = var.destination
   s3_bucket_arn                                    = var.s3_bucket_arn

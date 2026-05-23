@@ -1,5 +1,5 @@
-module "log_metric_filter" {
-  source                              = "git@github.com:CA-Bridge/ccaas-terraform-modules.git//terraform-aws-cloudwatch/modules/log-metric-filter?ref=v1.0.0"
+﻿module "log_metric_filter" {
+  source                              = "git::https://github.com/kiro-krafters/kk-terraform-modules.git//terraform-aws-cloudwatch/modules/log-metric-filter?ref=main"
   count                               = var.log_metric_filter_configuration != null && var.log_metric_filter_configuration != {} ? 1 : 0
   log_group_name                      = var.log_metric_filter_configuration.log_group_name
   metric_transformation_name          = var.log_metric_filter_configuration.metric_transformation_name

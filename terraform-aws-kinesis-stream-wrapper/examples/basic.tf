@@ -1,4 +1,4 @@
-module "kinesis_stream_basic" {
-  source = "git@github.com:CA-Bridge/ccaas-terraform-modules-wrapper.git//terraform-aws-kinesis-stream?ref=v1.0.0"
+﻿module "kinesis_stream_basic" {
+  source = "git::https://github.com/kiro-krafters/kk-terraform-modules-wrapper.git//terraform-aws-kinesis-stream?ref=main"
   tags   = local.tags
 }
