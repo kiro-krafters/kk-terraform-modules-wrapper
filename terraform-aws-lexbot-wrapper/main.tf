@@ -1,0 +1,26 @@
+module "lex_bot" {
+  prefix_company              = var.prefix_company
+  prefix_region               = var.prefix_region
+  env                         = var.env
+  application                 = var.application
+  source                      = "git@github.com:CA-Bridge/ccaas-terraform-modules.git//terraform-aws-lexbotv2?ref=v1.0.3"
+  name                        = var.name
+  auto_build_bot_locales      = true
+  instance_id                 = var.instance_id
+  data_privacy                = var.data_privacy
+  idle_session_ttl_in_seconds = var.idle_session_ttl_in_seconds
+  bot_file_s3_location        = var.bot_file_s3_location
+  sentiment_analysis_settings = var.sentiment_analysis_settings
+  role_arn                    = var.role_arn
+  #aws_iam_policy              = var.aws_iam_policy
+  lex_association           = var.lex_association
+  description               = var.description
+  create_lexbot             = var.create_lexbot
+  create_lexbot_version     = var.create_lexbot_version
+  version_description       = var.version_description
+  locale_specification      = var.locale_specification
+  create_lexbot_alias       = var.create_lexbot_alias
+  bot_alias_arn             = var.bot_alias_arn
+  bot_alias_name            = var.bot_alias_name
+  bot_alias_locale_settings = var.bot_alias_locale_settings
+}
